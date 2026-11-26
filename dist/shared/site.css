@@ -20,3 +20,28 @@ h1,h2,h3,.brand{font-family:Jakarta,Inter,sans-serif}h1{font-size:clamp(3rem,7.9
 @media(max-width:650px){.nav{gap:.5rem}.mobile{display:inline-flex;margin-left:auto}.nav-cta,.mobile{padding:.43rem .63rem;font-size:.8rem}.nav-links{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;padding:1rem;box-shadow:0 12px 20px #22123814}.mobile[aria-expanded=true]+.nav-links{display:grid}.menu{position:static;box-shadow:none;margin-top:.35rem}.split,.studio-layout{grid-template-columns:1fr}.hero-strip{width:142%;margin-left:-21%;gap:.55rem}.hero-strip figure{border-radius:.65rem}.hero-strip figcaption{display:none}.tools,.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.model-gallery{grid-template-columns:repeat(3,1fr)}.footer{flex-wrap:wrap}}
 @media(max-width:380px){.steps,.form-row{grid-template-columns:1fr}.button{font-size:.83rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+
+/* Warm editorial palette drawn from the garment and studio photography. */
+:root{--ink:#25201b;--muted:#62574e;--accent:#864525;--line:#e8ddcf;--wash:#f6f0e8;--white:#fffdf9}
+body{background:#fffdf9}
+.header{background:#fffdf9f2}.menu,.secondary,.chips button,.studio-form select,.uploads label,.results article,.tool-card{background:#fffdf9}
+.primary:hover{background:#65341c}
+.hero{background:#f9f2e7;padding-top:clamp(3rem,6vw,5.2rem)}
+.hero h1{font-size:clamp(2.9rem,7vw,6rem);letter-spacing:-.07em}
+.hero-note{font-size:.86rem;margin-top:.7rem}
+.hero-strip{margin-top:1.7rem;padding-bottom:2.4rem}
+.hero-strip figure{background:#e8d2af;box-shadow:0 10px 25px #50351c22}
+.hero-strip figure:first-child{background:#e2a4a0}.hero-strip figure:last-child{background:#a8bdca}
+.hero-strip figure:nth-child(3){background:#ebdcc8}.hero-strip figure:nth-child(3) img{object-position:center}
+.hero-strip figcaption{border-radius:.3rem}.image-label{border-radius:.3rem}
+.dark{background:#efe2d1;color:var(--ink)}.dark p:not(.eyebrow){color:var(--muted)}.dark .eyebrow{color:var(--accent)}
+.look-gallery img{background:#dec5a9}.steps article,.faq details{border-color:var(--line)}
+.comparison-images{background:#ede2d6}
+.proof-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;margin-top:1.6rem}
+.proof-grid figure{min-width:0}
+.proof-grid img{aspect-ratio:3/4;border-radius:.7rem;background:#eee3d6;object-position:center 30%}
+.proof-grid figcaption{font-weight:650;font-size:.93rem;margin-top:.5rem}
+.editorial>p:not(.eyebrow),#workflow .wrap>p:not(.eyebrow){max-width:61ch}
+.visual-steps article{border:0;padding:0}
+.visual-steps img{aspect-ratio:4/3;border-radius:.75rem;margin-bottom:.85rem;background:#eee3d6;object-position:center 32%}
+@media(max-width:650px){.proof-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.1rem .6rem}.visual-steps{grid-template-columns:1fr}.visual-steps article{display:grid;grid-template-columns:100px minmax(0,1fr);column-gap:.85rem;align-content:start}.visual-steps img{grid-row:span 2;aspect-ratio:1;margin:0}.visual-steps p{margin-top:.22rem}.hero h1 br{display:none}}
