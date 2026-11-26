@@ -10,6 +10,7 @@ Open http://127.0.0.1:8000 from the same machine.
 
 - `dist/features/navigation` controls menus.
 - `dist/features/gallery` controls comparisons, angles and reference galleries.
+- `dist/features/library` controls sample-library search and categories.
 - `dist/features/studio` controls tools, browser-local file previews and sample downloads.
 - `dist/shared` contains styling and the module entry point.
 - The Studio has no live generation, accounts or payments. Uploaded photos stay in memory in the browser. Each downloadable image is a prepared example.
