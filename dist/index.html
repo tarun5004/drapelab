@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="DrapeLab is a local-first fashion studio prototype for planning on-model product photography.">
+<title>DrapeLab — Fashion photography studio</title>
+<link rel="stylesheet" href="shared/site.css">
+<script type="module" src="shared/main.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="header"><nav class="nav wrap" aria-label="Main navigation">
+<a class="brand" href="#"><span class="brand-mark" aria-hidden="true">◈</span>DrapeLab</a>
+<button class="mobile button secondary" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+<div id="nav-links" class="nav-links">
+<details><summary>Product</summary><div class="menu"><a href="#features">Fashion photoshoot</a><a href="#compare">Virtual try-on</a><a href="#models">Model library</a><a href="#angles">Angle drafts</a></div></details>
+<details><summary>Tools</summary><div class="menu"><a href="#features">Explore tools</a><a href="#studio" data-tool="ghost">Ghost mannequin</a><a href="#studio" data-tool="flatlay">Flat lay</a></div></details>
+<a href="#workflow">How it works</a><a href="#faq">Resources</a>
+</div>
+<a class="button primary nav-cta" href="#studio">Open studio</a>
+</nav></header>
+<main id="main">
+<section class="hero">
+<div class="wrap hero-content">
+<p class="eyebrow"><span></span> LOCAL FASHION STUDIO</p>
+<h1>From flat lay<br>to <em>fashion shoot.</em></h1>
+<p class="hero-copy">Turn garment photos into on-model catalog shots. Explore poses, backgrounds and angles in one studio.</p>
+<div class="actions"><a class="button primary" href="#studio">Try the studio</a><a class="button secondary" href="#compare">See an example</a></div>
+</div>
+<div class="hero-strip" aria-label="Sample fashion photography">
+<figure><img src="assets/s8b-denim-man.webp" alt="Model in a short-sleeved denim jacket"><figcaption>Editorial</figcaption></figure>
+<figure><img src="assets/cutouts/f_full_pose.webp" alt="Model posing in a mustard kurta"><figcaption>On model</figcaption></figure>
+<figure><img src="assets/in-kurta-mustard.webp" alt="Original mustard kurta on a dress form"><figcaption>Original garment</figcaption></figure>
+<figure><img src="assets/cutouts/f_cine_motion.webp" alt="Model walking in a mustard kurta"><figcaption>Motion</figcaption></figure>
+<figure><img src="assets/s9-denim-woman.webp" alt="Model wearing a denim jacket in a cream studio"><figcaption>Lifestyle</figcaption></figure>
+</div>
+</section>
+<section id="compare" class="wrap section split">
+<div><p class="eyebrow">THE TRANSFORMATION</p><h2>One garment.<br>A whole listing.</h2><p>See how an original product photo looks alongside an on-model sample. Choose a garment, then move the divider to compare.</p><div class="chips" id="comparison-options" aria-label="Sample garments"></div></div>
+<div class="comparison">
+<div class="comparison-images"><img id="after-image" alt=""><div class="before-layer"><img id="before-image" alt=""></div><div class="divider" aria-hidden="true"></div><span class="image-label before-label">Original</span><span class="image-label after-label">On model</span></div>
+<label class="range-label" for="compare-slider">Image comparison</label><input id="compare-slider" type="range" min="0" max="100" value="50">
+</div>
+</section>
+<section id="features" class="section wash"><div class="wrap">
+<p class="eyebrow">THE STUDIO TOOLKIT</p><h2>Build the shoot you need.</h2>
+<div id="tool-cards" class="tools"></div>
+</div></section>
+<section id="workflow" class="wrap section">
+<p class="eyebrow">HOW IT WORKS</p><h2>From garment to gallery.</h2>
+<div class="steps"><article><h3>Add garment views</h3><p>Start with a front photo. Add the back and both sides when you want more reference detail.</p></article><article><h3>Set the direction</h3><p>Choose a model, shot type, pose and background.</p></article><article><h3>Review each angle</h3><p>Compare photos with their references and download the shots you want to keep.</p></article></div>
+</section>
+<section id="angles" class="section wash"><div class="wrap split angle-panel">
+<div><p class="eyebrow">ANGLE DRAFTS</p><h2>See the whole garment.</h2><p>Explore a front, side, back and detail view from the same sample coat shoot.</p><div id="angle-options" class="chips" aria-label="Sample angles"></div></div>
+<figure><img id="angle-image" alt=""><figcaption id="angle-caption" aria-live="polite"></figcaption></figure>
+</div></section>
+<section id="models" class="wrap section">
+<p class="eyebrow">MODEL LIBRARY</p><h2>Choose your cast.</h2>
+<div id="model-gallery" class="model-gallery"></div>
+</section>
+<section id="looks" class="section dark"><div class="wrap">
+<p class="eyebrow">CREATIVE DIRECTION</p><h2>Find the look.</h2><p>Explore campaign settings and pose references.</p>
+<div class="chips" id="look-options" aria-label="Gallery category"><button type="button" data-look="settings" aria-pressed="true">Settings</button><button type="button" data-look="poses" aria-pressed="false">Poses</button></div>
+<div id="look-gallery" class="look-gallery" tabindex="0" aria-label="Scrollable examples"></div>
+</div></section>
+<section id="studio" class="wrap section">
+<p class="eyebrow">LOCAL STUDIO</p><h2>Try a sample shoot.</h2><p class="studio-intro">Preview the workflow and download sample results. Your uploads stay in your browser during this demo.</p>
+<div class="studio-layout">
+<form id="studio-form" class="studio-form">
+<label for="tool">Workflow</label><select id="tool"></select>
+<fieldset><legend>Garment photos</legend><div id="uploads" class="uploads"></div></fieldset>
+<div id="model-field"><label for="model">Model</label><select id="model"></select></div>
+<div class="form-row"><div><label for="background">Setting</label><select id="background"></select></div><div><label for="pose">Pose</label><select id="pose"></select></div></div>
+<button class="button primary" type="submit">Show sample results</button><p class="hint" id="studio-status" role="status"></p>
+</form>
+<div class="studio-output"><h3>Sample results</h3><p class="hint">These are prepared examples. Uploaded photos appear as references.</p><div id="results" class="results"></div></div>
+</div>
+</section>
+<section id="faq" class="section wash"><div class="wrap split">
+<div><p class="eyebrow">RESOURCES</p><h2>Studio notes.</h2></div>
+<div class="faq">
+<details><summary>What photos should I prepare?</summary><p>Use clear photos in consistent lighting. Capture the front, back and both sides, keeping prints and details visible.</p></details>
+<details><summary>Does the preview generate AI photos?</summary><p>The local demo uses sample results. Your files serve as references in the preview and never leave the browser.</p></details>
+<details><summary>Can I use it without an account?</summary><p>Yes. Open the local preview and try any sample workflow without signing in.</p></details>
+<details><summary>How does billing work?</summary><p>The localhost demo has no payments or usage charges.</p></details>
+<details><summary>Who is it for?</summary><p>Clothing brands, independent boutiques, online sellers and anyone planning a garment catalog.</p></details>
+</div></div></section>
+</main>
+<footer><div class="wrap footer"><a class="brand" href="#"><span class="brand-mark" aria-hidden="true">◈</span>DrapeLab</a><div><a href="#features">Tools</a><a href="#faq">Resources</a><a href="#studio">Studio</a></div><p>Local prototype</p></div></footer>
+</body></html>
