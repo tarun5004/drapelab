@@ -114,9 +114,12 @@ export function initStudio() {
     results.replaceChildren(...toolSamples[tool.value].map(sampleCard));
   }
   document.addEventListener('click', event => {
-    const link = event.target.closest('a[data-tool], a[data-model]');
+    const link = event.target.closest('a[data-tool], a[data-model], a[data-setting], a[data-pose]');
     if (!link) return;
     if (link.dataset.tool) tool.value = link.dataset.tool;
+    if (link.dataset.setting || link.dataset.pose) tool.value = 'shoot';
+    if (link.dataset.setting) setting.value = link.dataset.setting;
+    if (link.dataset.pose) pose.value = link.dataset.pose;
     if (link.dataset.model) {
       tool.value = 'model';
       model.value = link.dataset.model;

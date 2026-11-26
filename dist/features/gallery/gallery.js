@@ -94,11 +94,33 @@ export function initGallery() {
   }));
   const lookGallery = document.querySelector('#look-gallery');
   const lookButtons = [...document.querySelectorAll('[data-look]')];
+  const featuredImage = document.querySelector('#look-image');
+  const useLook = document.querySelector('#look-use');
   function showLooks(category) {
     const items = category === 'settings' ? settings : poses;
-    lookGallery.replaceChildren(...items.map(figure));
+    const cards = items.map(item => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.append(figure(item));
+      return button;
+    });
+    function select(index) {
+      const [name, path] = items[index];
+      featuredImage.src = 'assets/' + path;
+      featuredImage.alt = 'Fashion photography example: ' + name;
+      document.querySelector('#look-title').textContent = name;
+      document.querySelector('#look-copy').textContent = category === 'settings'
+        ? 'Use this setting in the sample Studio.'
+        : 'Use this pose in the sample Studio.';
+      useLook.dataset.setting = category === 'settings' ? name : '';
+      useLook.dataset.pose = category === 'poses' ? name : '';
+      cards.forEach((button, i) => button.setAttribute('aria-pressed', String(i === index)));
+    }
+    cards.forEach((button, index) => button.addEventListener('click', () => select(index)));
+    lookGallery.replaceChildren(...cards);
     lookGallery.scrollLeft = 0;
     lookButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.look === category)));
+    select(0);
   }
   lookButtons.forEach(button => button.addEventListener('click', () => showLooks(button.dataset.look)));
   showLooks('settings');
