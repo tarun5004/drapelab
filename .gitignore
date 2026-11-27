@@ -1,0 +1,5 @@
+.venv/
+.drapelab/
+__pycache__/
+.pytest_cache/
+.env
