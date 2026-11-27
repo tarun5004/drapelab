@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DrapeLab Studio</title>
+<link rel="stylesheet" href="shared/site.css">
+<link rel="stylesheet" href="features/studio/shoot.css">
+<script type="module" src="features/studio/shoot.js"></script>
+</head>
+<body>
+<header class="header"><nav class="nav wrap" aria-label="Studio navigation"><a class="brand" href="/">DrapeLab</a><a href="/#studio">Sample gallery</a></nav></header>
+<main class="wrap section">
+<h1 class="studio-title">Build your shoot.</h1>
+<p class="studio-intro">Upload a garment, pick a model, and add the shots you need.</p>
+<div class="studio-layout">
+<form id="shoot-form" class="studio-form">
+<fieldset><legend>Generation provider</legend>
+<label for="provider">Provider</label><select id="provider"><option value="sample">Sample mode · no key</option><option value="fashn">FASHN</option><option value="gemini">Gemini</option></select>
+<div id="credentials" hidden><label for="provider-key">Your provider API key</label><input id="provider-key" type="password" autocomplete="off" maxlength="1024"><p id="provider-note" class="hint"></p><label class="consent"><input id="consent" type="checkbox"> Send these references to my selected provider. My provider may charge for generation.</label></div>
+</fieldset>
+<fieldset><legend>Garment references</legend><div id="references" class="uploads"></div></fieldset>
+<fieldset><legend>Model and pose references</legend>
+<label for="cast">Choose a model</label><select id="cast" required></select><img id="cast-preview" class="reference-preview" alt="Selected model" hidden>
+<label for="model-photo">Or upload your own person reference</label><input id="model-photo" type="file" accept="image/jpeg,image/png,image/webp">
+<label for="pose-photo">Optional pose reference</label><input id="pose-photo" type="file" accept="image/jpeg,image/png,image/webp">
+<p class="hint">Use photos you have permission to use.</p>
+</fieldset>
+<fieldset><legend>Add a shot</legend><div class="form-row">
+<div><label for="angle">Angle</label><select id="angle"><option value="front">Front</option><option value="back">Back</option><option value="left">Left</option><option value="right">Right</option><option value="three-quarter">Three-quarter</option><option value="detail">Fabric detail</option></select></div>
+<div><label for="shot-pose">Pose</label><select id="shot-pose"><option value="standing">Standing</option><option value="walking">Walking</option><option value="seated">Seated</option><option value="reference">Use pose reference</option></select></div>
+<div><label for="scene">Background</label><select id="scene"><option value="studio">Studio</option><option value="outdoor">Outdoor</option><option value="interior">Interior</option></select></div>
+<div><label for="crop">Crop</label><select id="crop"><option>4:5</option><option>1:1</option><option>3:4</option><option>9:16</option></select></div>
+</div><button id="add-shot" class="button secondary" type="button">Add to shot list</button></fieldset>
+<button class="button primary" type="submit">Generate selected shots</button>
+<p id="shoot-status" class="hint" role="status"></p>
+</form>
+<section class="studio-output" aria-labelledby="shots-title">
+<h2 id="shots-title">Shot list</h2><p id="estimate" class="hint"></p><div id="shot-list" class="shot-list"></div>
+</section>
+</div>
+</main>
+</body>
+</html>
