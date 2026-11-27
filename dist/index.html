@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="DrapeLab is a local-first fashion studio prototype for planning on-model product photography.">
+<title>DrapeLab — Fashion photography studio</title>
+<link rel="stylesheet" href="shared/site.css">
+<script type="module" src="shared/main.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="header"><nav class="nav wrap" aria-label="Main navigation">
+<a class="brand" href="#"><span class="brand-mark" aria-hidden="true">◈</span>DrapeLab</a>
+<button class="mobile button secondary" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+<div id="nav-links" class="nav-links">
+<details><summary>Product</summary><div class="menu"><a href="#features">Fashion photoshoot</a><a href="#compare">Virtual try-on</a><a href="#models">Model library</a><a href="#angles">Angle drafts</a></div></details>
+<details><summary>Tools</summary><div class="menu"><a href="#features">Explore tools</a><a href="#catalog">Garment-only shots</a><a href="#library">Asset library</a><a href="#studio" data-tool="ghost">Ghost mannequin</a><a href="#studio" data-tool="flatlay">Flat lay</a></div></details>
+<a href="#workflow">How it works</a><a href="#looks">Looks</a><a href="#guides">Guides</a>
+</div>
+<a class="button primary nav-cta" href="#studio">Open studio</a>
+</nav></header>
+<main id="main">
+<section class="hero">
+<div class="wrap hero-content">
+<p class="eyebrow">FASHION PHOTOGRAPHY STUDIO</p>
+<h1>Turn clothing photos into<br><em>on-model images.</em></h1>
+<p class="hero-copy">Start with a flat lay, hanger shot or phone photo. See how one garment can become a full set of images for your store, lookbook or campaign.</p>
+<div class="actions"><a class="button primary" href="#studio">Try the sample studio</a><a class="button secondary" href="#compare">See the original and result</a></div>
+<p class="hero-note">Interactive preview · No account or card needed</p>
+</div>
+<div class="hero-strip" aria-label="One mustard kurta photographed five ways">
+<figure><img src="assets/cutouts/f_ultra_vogue.webp" alt="Mustard kurta styled for an editorial"><figcaption>Editorial</figcaption></figure>
+<figure><img src="assets/cutouts/f_full_pose.webp" alt="Model posing in the mustard kurta"><figcaption>On model</figcaption></figure>
+<figure><img src="assets/in-kurta-mustard.webp" alt="Original mustard kurta on a dress form"><figcaption>Original garment</figcaption></figure>
+<figure><img src="assets/cutouts/f_cine_motion.webp" alt="Model walking in the mustard kurta"><figcaption>In motion</figcaption></figure>
+<figure><img src="assets/cutouts/f_upper_hair.webp" alt="Close-up of the kurta neckline"><figcaption>Close-up</figcaption></figure>
+</div>
+</section>
+<section class="section wrap editorial" id="examples"><p class="eyebrow">THE PRODUCT LISTING</p><h2>One coat, four reasons to look closer.</h2><p>Show how it fits, how it moves and what the fabric looks like up close. Each of these sample shots has a job to do on a product page.</p>
+<div class="proof-grid">
+<figure><img loading="lazy" src="assets/f-coat-back.webp" alt="Back of the pink wool coat on a model"><figcaption>Show how it hangs from behind</figcaption></figure>
+<figure><img loading="lazy" src="assets/s7-coat-white.webp" alt="Pink coat on a different model in a bright room"><figcaption>Show the same coat on another model</figcaption></figure>
+<figure><img loading="lazy" src="assets/f-coat-seated.webp" alt="Model wearing the pink coat while seated"><figcaption>Style it for social and ads</figcaption></figure>
+<figure><img loading="lazy" src="assets/f-coat-detail.webp" alt="Close-up of the pink coat collar and buttons"><figcaption>Get close enough to see the fabric</figcaption></figure>
+</div></section>
+<section id="compare" class="wrap section split">
+<div><p class="eyebrow">THE TRANSFORMATION</p><h2>One garment.<br>A whole listing.</h2><p>See how an original product photo looks alongside an on-model sample. Choose a garment, then move the divider to compare.</p><div class="chips" id="comparison-options" aria-label="Sample garments"></div></div>
+<div class="comparison">
+<div class="comparison-images"><img id="after-image" alt=""><div class="before-layer"><img id="before-image" alt=""></div><div class="divider" aria-hidden="true"></div><span class="image-label before-label">Original</span><span class="image-label after-label">On model</span></div>
+<label class="range-label" for="compare-slider">Image comparison</label><input id="compare-slider" type="range" min="0" max="100" value="50">
+</div>
+</section>
+<section id="workflow" class="section wash"><div class="wrap">
+<p class="eyebrow">FROM CAMERA TO CATALOG</p><h2>Start with the photos you have.</h2>
+<p>A clear front shot is enough to explore the workflow. Add back and side photos to document the parts your main image misses.</p>
+<div class="steps visual-steps">
+<article><img loading="lazy" src="assets/t-flat-coat.webp" alt="Pink coat photographed as a flat lay"><h3>Photograph your garment</h3><p>Lay it flat, hang it up or photograph it on a mannequin in even light.</p></article>
+<article><img loading="lazy" src="assets/cam-side.webp" alt="Side-view example showing the coat silhouette"><h3>Add the angles that matter</h3><p>Use the labeled front, back, left and right slots in the Studio.</p></article>
+<article><img loading="lazy" src="assets/s6-coat-asian.webp" alt="Finished sample of the pink coat on a model"><h3>Review the shot list</h3><p>Choose a model, setting and pose. The preview lets you inspect and download prepared sample images.</p></article>
+</div></div></section>
+<section id="features" class="section wrap"><p class="eyebrow">THE STUDIO TOOLKIT</p><h2>What would you like to shoot?</h2><p>Explore a workflow for your product page, campaign or catalog.</p><div id="tool-cards" class="tools"></div></section>
+<section id="catalog" class="section wash"><div class="wrap"><p class="eyebrow">GARMENT-ONLY PHOTOGRAPHY</p><h2>Let the piece speak for itself.</h2><p>Compare clean hanger, flat-lay, ghost mannequin and mannequin presentation styles.</p><div class="proof-grid catalog-grid">
+<figure><img loading="lazy" src="assets/t-hanger-dress.webp" alt="Printed dress on a hanger"><figcaption>Hanger</figcaption></figure>
+<figure><img loading="lazy" src="assets/t-flat-coat.webp" alt="Pink coat laid flat"><figcaption>Flat lay</figcaption></figure>
+<figure><img loading="lazy" src="assets/t-ghost-denim.webp" alt="Denim jacket presented as a ghost mannequin image"><figcaption>Ghost mannequin</figcaption></figure>
+<figure><img loading="lazy" src="assets/t-mannequin.webp" alt="Denim jacket on a display mannequin"><figcaption>Mannequin</figcaption></figure>
+</div></div></section>
+<section id="angles" class="section wash"><div class="wrap split angle-panel">
+<div><p class="eyebrow">ANGLE DRAFTS</p><h2>See the whole garment.</h2><p>Explore a front, side, back and detail view from the same sample coat shoot.</p><div id="angle-options" class="chips" aria-label="Sample angles"></div></div>
+<figure><img id="angle-image" alt=""><figcaption id="angle-caption" aria-live="polite"></figcaption></figure>
+</div></section>
+<section id="models" class="wrap section">
+<p class="eyebrow">MODEL LIBRARY</p><h2>Choose your cast.</h2>
+<div id="model-gallery" class="model-gallery"></div>
+</section>
+<section id="looks" class="section dark"><div class="wrap">
+<p class="eyebrow">CREATIVE DIRECTION</p><h2>Find the look.</h2><p>Explore campaign settings and pose references.</p>
+<div class="chips" id="look-options" aria-label="Gallery category"><button type="button" data-look="settings" aria-pressed="true">Settings</button><button type="button" data-look="poses" aria-pressed="false">Poses</button></div>
+<div id="look-spotlight" class="look-spotlight"><img id="look-image" alt=""><div><h3 id="look-title"></h3><p id="look-copy"></p><a id="look-use" class="button primary" href="#studio">Use this look</a></div></div>
+<div id="look-gallery" class="look-gallery" tabindex="0" aria-label="Scrollable examples"></div>
+</div></section>
+<section id="library" class="section wash"><div class="wrap split">
+<div><p class="eyebrow">ASSET LIBRARY</p><h2>Keep a collection together.</h2><p>Browse the sample library to see how garment references, model references and finished photos can be organized for a collection.</p><a class="text-link" href="#studio">Open the sample Studio</a></div>
+<div class="library"><label for="library-search">Search the sample library</label><input id="library-search" type="search" placeholder="Try wool, denim or kurta"><div id="library-categories" class="chips" aria-label="Library categories"></div><div id="library-results" class="library-results" aria-live="polite"></div></div>
+</div></section>
+<section id="studio" class="wrap section">
+<p class="eyebrow">LOCAL STUDIO</p><h2>Try a sample shoot.</h2><p class="studio-intro">Preview the workflow and download sample results. Your uploads stay in your browser during this demo.</p>
+<div class="studio-layout">
+<form id="studio-form" class="studio-form">
+<label for="tool">Workflow</label><select id="tool"></select>
+<fieldset><legend>Garment photos</legend><div id="uploads" class="uploads"></div></fieldset>
+<div id="model-field"><label for="model">Model</label><select id="model"></select></div>
+<div class="form-row"><div><label for="background">Setting</label><select id="background"></select></div><div><label for="pose">Pose</label><select id="pose"></select></div></div>
+<button class="button primary" type="submit">Show sample results</button><p class="hint" id="studio-status" role="status"></p>
+</form>
+<div class="studio-output"><h3>Sample results</h3><p class="hint">These are prepared examples. Uploaded photos appear as references.</p><div id="results" class="results"></div></div>
+</div>
+</section>
+<section id="guides" class="section wrap"><p class="eyebrow">FIELD GUIDE</p><h2>Plan a better product shoot.</h2><div class="guides">
+<details><summary>Prepare product photos</summary><p>Use even light, keep the whole garment in frame and avoid filters. Take a close-up of any embroidery or print you need to check in the final photo.</p></details>
+<details><summary>Build a useful shot list</summary><p>Start with a clean front image, then add a back view, side view and fabric detail. Keep editorial poses for banners, ads and social posts.</p></details>
+<details><summary>Check before you publish</summary><p>Compare the output with the original. Check logos, print alignment, buttons, seams, color and hem length before you use an image in your store.</p></details>
+</div></section>
+<section id="faq" class="section wash"><div class="wrap split">
+<div><p class="eyebrow">RESOURCES</p><h2>Studio notes.</h2></div>
+<div class="faq">
+<details><summary>What photos should I prepare?</summary><p>Use clear photos in consistent lighting. Capture the front, back and both sides, keeping prints and details visible.</p></details>
+<details><summary>Does the preview generate AI photos?</summary><p>The local demo uses sample results. Your files serve as references in the preview and never leave the browser.</p></details>
+<details><summary>Can I use it without an account?</summary><p>Yes. Open the local preview and try any sample workflow without signing in.</p></details>
+<details><summary>How does billing work?</summary><p>The localhost demo has no payments or usage charges.</p></details>
+<details><summary>How do I check garment accuracy?</summary><p>Compare each image against a reference of the same angle. Pay special attention to labels, logo text, prints, seams and garment length.</p></details>
+<details><summary>Who is it for?</summary><p>Clothing brands, independent boutiques, online sellers and anyone planning a garment catalog.</p></details>
+</div></div></section>
+</main>
+<footer><div class="wrap footer"><a class="brand" href="#"><span class="brand-mark" aria-hidden="true">◈</span>DrapeLab</a><div><a href="#features">Tools</a><a href="#faq">Resources</a><a href="#studio">Studio</a></div><p>Fashion photography preview</p></div></footer>
+</body></html>
