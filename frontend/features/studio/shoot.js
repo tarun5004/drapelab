@@ -157,7 +157,8 @@ async function run(selected) {
   busy = true;
   const fields = [...form.querySelectorAll('input, select, button')];
   fields.forEach(field => { field.disabled = true; });
-  const headers = key.value.trim() ? { 'DrapeLab-Key': key.value.trim() } : {};
+  const headers = { 'X-DrapeLab': 'studio' };
+  if (key.value.trim()) headers['DrapeLab-Key'] = key.value.trim();
   let completed = 0;
   try {
     for (const { shot, body, garment, estimated } of requests) {

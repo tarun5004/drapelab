@@ -49,12 +49,15 @@ def create_shot(
     garment: Annotated[UploadFile, File()],
     model_photo: Annotated[UploadFile | None, File()] = None,
     pose_photo: Annotated[UploadFile | None, File()] = None,
+    x_drapelab: Annotated[str | None, Header()] = None,
     drapelab_key: Annotated[str | None, Header(max_length=1024)] = None,
 ):
     try:
         shot = Shot.model_validate_json(brief)
     except ValidationError:
         raise HTTPException(422, "The selected shot settings are invalid.") from None
+    if x_drapelab != "studio":
+        raise HTTPException(403, "Submit shots from the DrapeLab Studio.")
     key = provider_key(shot.provider, drapelab_key)
     if shot.provider != "sample" and not key:
         raise HTTPException(400, "Enter the selected provider's API key first.")
